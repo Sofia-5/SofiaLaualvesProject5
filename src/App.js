@@ -32,9 +32,24 @@ class App extends Component {
   componentDidMount() { 
     const dbRef = firebase.database().ref();
     dbRef.on('value', (snapshot) => {
-          
+      const data = snapshot.val();
+      console.log(data)
+      
+      const nextOptionArray = []; 
+
+      for (let selectedCategory in data) {
+        const nextOptionObject = {
+          category: selectedCategory,
+          sAlternatives: data[selectedCategory]
+        }
+        nextOptionArray.push(nextOptionObject)
+      }
+      console.log(nextOptionArray)
+      
       this.setState({
         data: snapshot.val(),
+        nextOption: nextOptionArray
+        
       })
     })
   }
@@ -47,6 +62,7 @@ class App extends Component {
     const category = this.state.data[id]
   
     this.setState({
+      selectedCategory: id,
       selectedOption: category[Object.keys(category)[0]],
       selectedHomeFeature: Object.keys(category)[0]
 
@@ -68,8 +84,7 @@ class App extends Component {
 
 
         <House handleClickProp={this.handleClick}/>
-        
-
+      
         {/* <button id="Roof" onClick={this.handleClick}>Roof</button>
 
         <button id="Windows" onClick={this.handleClick}>Windows</button>
@@ -78,13 +93,20 @@ class App extends Component {
 
         { 
         this.state.selectedHomeFeature !== "" ? 
-        <div className="displayContainer"> 
-          <div className="content">
-            <h2>{this.state.selectedHomeFeature}</h2>
-            <p>{this.state.selectedOption.Description}</p>
+      
+        <div className="displayCategory"> 
+          <div className="flex">
+            <h2> Selected: {this.state.selectedCategory} </h2>
+            <button onClick={this.clickOtherOptions}>Other Options</button>
           </div>
-          <div className="imgContainer">
-            <img src={this.state.selectedOption.Image}/> 
+          <div className="displayContainer">
+            <div className="content">
+              <h2>{this.state.selectedHomeFeature}</h2>
+              <p>{this.state.selectedOption.Description}</p>
+            </div>
+            <div className="imgContainer">
+              <img src={this.state.selectedOption.Image}/> 
+            </div>
           </div>
         </div> 
         : <p className="instructions">Click on a part of the house or trees above to learn about sustainable features to help save you on your energy bill and help improve the health of our planet.</p>  
