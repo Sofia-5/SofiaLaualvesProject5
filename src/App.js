@@ -4,7 +4,7 @@ import House from './House';
 import './App.css';
 
 // Listen for a click event when the user clicks on the image part (button), using onClick method 
-// Grab specific ID in the object in Firebase to find the correct/matching key of the key associated with the user's chosen image part (button)
+// Grab specific ID in the object in Firebase to find the matching key of the key associated with the user's chosen image part (button)
 // Print the key and value from Firebase to the page ternary operator 
 
 // What do I need? 
@@ -16,8 +16,6 @@ import './App.css';
   // Home Feature Clicked = selectedHomeFeature
   // Sustainable Alternatives = selectedOption
   
-  
-
 class App extends Component {
   constructor() {
     super();
@@ -25,9 +23,9 @@ class App extends Component {
       selectedHomeFeature: "",
       data: {},
       selectedOption: {},
-      nextOption: [],
       selectedAlternatives: [],
-      currentIndex: 0
+      currentIndex: 0,
+      emptyOjbject: "More info coming soon"
     }
   }
 
@@ -43,12 +41,10 @@ class App extends Component {
       })
     })
   }
-  // ask teacher about loading states 
 
   handleClick = (id) => {
     console.log(id);
  
-    // const category = this.state.data[event.target.id]
     const category = this.state.data[id]
     
     this.setState({
@@ -62,16 +58,14 @@ class App extends Component {
   clickOtherOptions = () => {
     
     const category = this.state.data[this.state.selectedCategory]
-    console.log(category)
-    if (Object.keys(category).length > this.state.currentIndex) return 
-    
-    console.log(this.state.currentIndex)
-    this.setState({
-      selectedOption: category[Object.keys(category)[this.state.currentIndex]],
-      selectedHomeFeature: Object.keys(category)[this.state.currentIndex],
-      selectedAlternatives: Object.keys(category),
-      currentIndex: this.state.currentIndex + 1
-    })
+    if (Object.keys(category).length === 2) {
+      this.setState({
+        selectedOption: category[Object.keys(category)[1]],
+        selectedHomeFeature: Object.keys(category)[1],
+        selectedAlternatives: Object.keys(category),
+        currentIndex: this.state.currentIndex + 1
+      })
+    } 
   }
 
   render () {

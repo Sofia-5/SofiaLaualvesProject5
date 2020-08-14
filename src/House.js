@@ -10,7 +10,7 @@ class House extends Component {
           >
             <switch>
               <g>
-                <g id="evergreen_tree" onClick={() => this.props.handleClickProp("Landscaping - Evergreen Trees")}>
+                <g id="evergreen_tree" onClick={() => this.props.handleClickProp("Evergreen Tree")}>
                   <g id="XMLID_239_">
                     <g id="XMLID_1849_">
                       <g id="XMLID_1920_">
@@ -98,7 +98,7 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="deciduous_tree" onClick={() => this.props.handleClickProp("Landscaping")}>
+                <g id="deciduous_tree" onClick={() => this.props.handleClickProp("Deciduous Trees")}>
                   <g id="XMLID_15_">
                     <g id="XMLID_1429_">
                       <path
@@ -832,7 +832,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="light_fixture" onClick={() => this.props.handleClickProp("Light Fixtures")}>
+                <g id="light_fixture" onClick={() => this.props.handleClickProp("Lighting")}>
                   <g id="XMLID_240_">
                     <path
                       id="XMLID_647_"
