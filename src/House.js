@@ -10,7 +10,7 @@ class House extends Component {
           >
             <switch>
               <g>
-                <g id="evergreen_tree">
+                <g id="evergreen_tree" onClick={() => this.props.handleClickProp("Landscaping - Evergreen Trees")}>
                   <g id="XMLID_239_">
                     <g id="XMLID_1849_">
                       <g id="XMLID_1920_">
@@ -183,21 +183,24 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="house_wall">
+                <g id="exterior_house_wall" onClick={() => this.props.handleClickProp("Exterior Wall")}>
                   <path
-                    id="XMLID_410_"
+                    id="exterior_walls"
                     fill="#aed9cf"
                     d="M472.3 504.4h1760v754.1h-1760z"
+                    onClick={() => this.props.handleClickProp("Exterior Wall")}
                   ></path>
                   <path
-                    id="XMLID_387_"
+                    id="exterior_walls2"
                     fill="#8db1ab"
                     d="M1448.6 738h17.6v506.5h-17.6z"
+                    onClick={() => this.props.handleClickProp("Exterior Wall")}
                   ></path>
                   <path
-                    id="XMLID_409_"
+                    id="exterior_walls3"
                     fill="#8db1ab"
                     d="M847.4 746.6h17.9v508.9h-17.9z"
+                    onClick={() => this.props.handleClickProp("Exterior Wall")}
                   ></path>
                 </g>
                 <g id="cross_section_border"
@@ -205,39 +208,44 @@ class House extends Component {
                   strokeMiterlimit="10"
                   strokeWidth="12.082">
                   <path
-                    id="XMLID_4_"
+                    id="interior_wall_upstairs"
                     fill="#c7e5f8"
                     d="M1547.6 584.9h572.7v271.2h-572.7z"
+                    onClick={() => this.props.handleClickProp("Interior Wall")}
                   ></path>
                   <path
-                    id="XMLID_37_"
+                    id="interior_wall_downstairs"
                     fill="#fec558"
                     d="M1547.6 926.8h572.7V1198h-572.7z"
+                    onClick={() => this.props.handleClickProp("Interior Wall")}
                   ></path>
                 </g>
                 <g id="front_door_and_unit">
                   <g id="XMLID_85_">
                     <g id="XMLID_88_">
                       <path
-                        id="XMLID_297_"
+                        id="exterior_walls_around_door"
                         fill="#eae8d1"
                         d="M1162.6 508.8l-298.5 216v537.7h588V724.9z"
+                        onClick={() => this.props.handleClickProp("Exterior Wall")}
                       ></path>
                     </g>
                   </g>
                   <path
-                    id="XMLID_230_"
+                    id="exterior_walls_around_door2"
                     fill="#c9c2a6"
                     d="M986.8 1257.6v-169.1c0-94.8 76.8-171.6 171.6-171.6s171.6 76.8 171.6 171.6v169.1"
+                    onClick={() => this.props.handleClickProp("Exterior Wall")}
                   ></path>
                   <g id="XMLID_49_">
                     <path
-                      id="XMLID_294_"
+                      id="Door"
                       fill="#6c4441"
                       d="M1095.5 1014.5h125.9v224.1h-125.9z"
+                      onClick={() => this.props.handleClickProp("Door")}
                     ></path>
                     <circle
-                      id="XMLID_231_"
+                      id="Door Handle"
                       cx="1208.3"
                       cy="1135.6"
                       r="4.9"
@@ -245,10 +253,10 @@ class House extends Component {
                     ></circle>
                   </g>
                 </g>
-                <g id="AC_unit_inside">
+                <g id="AC_unit_inside" onClick={() => this.props.handleClickProp("Interior AC Unit")}>
                   <g id="XMLID_640_">
                     <path
-                      id="XMLID_621_"
+                      id="AC_inside"
                       fill="#e6e7e8"
                       d="M1713.3 1005.2h-138.8c-3.4 0-6.1-2.8-6.1-6.1V960c0-3.4 2.7-6.1 6.1-6.1h138.8c3.4 0 6.1 2.8 6.1 6.1v39c0 3.4-2.7 6.2-6.1 6.2z"
                     ></path>
@@ -313,41 +321,41 @@ class House extends Component {
                     d="M1582.9 1001.2h121.8"
                   ></path>
                 </g>
-                <g id="sofa">
+                <g id="sofa" onClick={() => this.props.handleClickProp("Furniture")}>
                   <g id="XMLID_604_">
                     <path
-                      id="XMLID_607_"
+                      id="top_of_sofa"
                       fill="#88bb40"
                       d="M1790.2 1162.7h-196.8c-4 0-7.2-3.2-7.2-7.2v-51.1c0-4 3.2-7.2 7.2-7.2h196.8c4 0 7.2 3.2 7.2 7.2v51.1c-.1 4-3.3 7.2-7.2 7.2z"
                     ></path>
                     <path
-                      id="XMLID_612_"
+                      id="bottom_of_sofa"
                       fill="#7ea13e"
                       d="M1824.9 1135.4c0-7.7-6.2-13.9-13.9-13.9-7 0-12.8 5.2-13.7 11.9H1588c-.4-7.3-6.4-13.1-13.8-13.1-7.7 0-13.9 6.2-13.9 13.9 0 4.3 2 8.2 5.1 10.8v40.5c0 3.6 2.9 6.5 6.5 6.5h239.6c3.6 0 6.5-2.9 6.5-6.5v-38.2c4.2-2.4 6.9-6.9 6.9-11.9z"
                     ></path>
                     <path
-                      id="XMLID_608_"
+                      id="middle_back_sofa"
                       fill="#88bb40"
                       d="M1794.3 1161.4h-204.9c-1.7 0-3.1-1.4-3.1-3.1v-32.6c0-1.7 1.4-3.1 3.1-3.1h204.9c1.7 0 3.1 1.4 3.1 3.1v32.6c-.1 1.8-1.4 3.1-3.1 3.1z"
                     ></path>
                     <path
-                      id="XMLID_609_"
+                      id="left_cushion"
                       fill="#6b8c3b"
                       d="M1652.4 1161.4h-63c-1.7 0-3.1-1.4-3.1-3.1v-11c0-1.7 1.4-3.1 3.1-3.1h63c1.7 0 3.1 1.4 3.1 3.1v11c0 1.8-1.4 3.1-3.1 3.1z"
                     ></path>
                     <path
-                      id="XMLID_611_"
+                      id="middle_cushion"
                       fill="#6b8c3b"
                       d="M1723.3 1161.4h-63c-1.7 0-3.1-1.4-3.1-3.1v-11c0-1.7 1.4-3.1 3.1-3.1h63c1.7 0 3.1 1.4 3.1 3.1v11c0 1.8-1.4 3.1-3.1 3.1z"
                     ></path>
                     <path
-                      id="XMLID_617_"
+                      id="right_cushion"
                       fill="#6b8c3b"
                       d="M1794.3 1161.4h-63c-1.7 0-3.1-1.4-3.1-3.1v-11c0-1.7 1.4-3.1 3.1-3.1h63c1.7 0 3.1 1.4 3.1 3.1v11c-.1 1.8-1.4 3.1-3.1 3.1z"
                     ></path>
                   </g>
                 </g>
-                <g id="bookshelf">
+                <g id="bookshelf" onClick={() => this.props.handleClickProp("Furniture")}>
                   <g id="Bookcase_2_">
                     <g id="Cupboard">
                       <path
@@ -803,7 +811,7 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="coffee_table">
+                <g id="coffee_table" onClick={() => this.props.handleClickProp("Furniture")}>
                   <g
                     id="XMLID_616_"
                     fill="none"
@@ -824,7 +832,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="light_fixture">
+                <g id="light_fixture" onClick={() => this.props.handleClickProp("Light Fixtures")}>
                   <g id="XMLID_240_">
                     <path
                       id="XMLID_647_"
@@ -867,40 +875,40 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="showerhead_and_bathtub">
+                <g id="showerhead_and_bathtub" onClick={() => this.props.handleClickProp("Shower Head")}>
                   <g id="XMLID_97_">
                     <path
-                      id="XMLID_65_"
+                      id="left_tub_leg"
                       fill="#c2b59b"
                       d="M1922.3 834.3h6.9V850h-6.9z"
                     ></path>
                     <path
-                      id="XMLID_63_"
+                      id="right_tub_leg"
                       fill="#c2b59b"
                       d="M2023.2 834.3h6.9V850h-6.9z"
                     ></path>
                     <path
-                      id="XMLID_64_"
+                      id="shower"
                       fill="#939598"
                       d="M1881.9 778.5h-6.9v-155c0-6 4.2-12 7.1-14.1 9.7-6.7 16.4-1.9 19.6 1.6 6.3 6.9 18.3 22.2 18.8 22.8l-5.4 4.2c-.1-.2-12.3-15.7-18.4-22.4-3-3.3-6.3-3.5-10.6-.5-1.2.8-4.2 4.8-4.2 8.4v155z"
                     ></path>
                     <path
-                      id="XMLID_98_"
+                      id="shower_head"
                       fill="#939598"
                       d="M1934 633.3c1 1.4.6 3.3-.8 4.2l-19.4 13.5c-1.4 1-3.3.6-4.2-.8l5.5-15.4c.9-.6 1.1-.8 2.5-1.7"
                     ></path>
                     <path
-                      id="XMLID_90_"
+                      id="shower_knob"
                       fill="#939598"
                       d="M1896.3 744.5h-16.9c-1.7 0-3-1.4-3-3s1.4-3 3-3h10.9V730c0-1.7 1.4-3 3-3s3 1.4 3 3v14.5z"
                     ></path>
                     <path
-                      id="XMLID_62_"
+                      id="tub"
                       fill="#f1f2f2"
                       d="M2078.9 766.5v27.9c0 24.8-20.1 44.9-44.9 44.9h-116.9c-24.8 0-44.9-20.1-44.9-44.9v-27.9"
                     ></path>
                     <path
-                      id="XMLID_54_"
+                      id="tub2"
                       fill="#d1d3d4"
                       d="M2087 768.6h-222.1c-.8 0-1.4-.6-1.4-1.4v-3.7c0-.8.6-1.4 1.4-1.4H2087c.8 0 1.4.6 1.4 1.4v3.7c.1.8-.6 1.4-1.4 1.4z"
                     ></path>
@@ -949,7 +957,7 @@ class House extends Component {
                     ></use>
                   </g>
                 </g>
-                <g id="faucet_and_sink">
+                <g id="faucet_and_sink" onClick={() => this.props.handleClickProp("Faucets")}>
                   <g id="XMLID_53_">
                     <path
                       id="XMLID_89_"
@@ -988,7 +996,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="toilet">
+                <g id="toilet" onClick={() => this.props.handleClickProp("Toilet")}>
                   <g id="XMLID_40_">
                     <path
                       id="XMLID_38_"
@@ -1691,7 +1699,7 @@ class House extends Component {
                     <path id="XMLID_73_" fill="none" d="M1156.5 641.9V815"></path>
                   </g>
                 </g>
-                <g id="AC_unit_outside">
+                <g id="AC_unit_outside" onClick={() => this.props.handleClickProp("Outdoor AC Unit")}>
                   <g id="XMLID_1339_">
                     <path
                       id="XMLID_1341_"
@@ -1948,10 +1956,10 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="floor">
+                <g id="outdoor_grass" onClick={() => this.props.handleClickProp("Grass")}>
                   <g id="XMLID_35_">
                     <path
-                      id="XMLID_87_"
+                      id="outdoor_grass"
                       fill="#83aa46"
                       d="M0 1221.2h2755.2v37.3H0z"
                     ></path>
@@ -1985,7 +1993,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="compass">
+                <g id="compass" onClick={() => this.props.handleClickProp("Orientation")}>
                   <g id="XMLID_52_">
                     <g id="XMLID_503_">
                       <path

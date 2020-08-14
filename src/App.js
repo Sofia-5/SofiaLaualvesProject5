@@ -25,7 +25,9 @@ class App extends Component {
       selectedHomeFeature: "",
       data: {},
       selectedOption: {},
-      nextOption: []
+      nextOption: [],
+      selectedAlternatives: [],
+      currentIndex: 0
     }
   }
 
@@ -34,21 +36,9 @@ class App extends Component {
     dbRef.on('value', (snapshot) => {
       const data = snapshot.val();
       console.log(data)
-      
-      const nextOptionArray = []; 
-
-      for (let selectedCategory in data) {
-        const nextOptionObject = {
-          category: selectedCategory,
-          sAlternatives: data[selectedCategory]
-        }
-        nextOptionArray.push(nextOptionObject)
-      }
-      console.log(nextOptionArray)
-      
+          
       this.setState({
-        data: snapshot.val(),
-        nextOption: nextOptionArray
+        data: snapshot.val()
         
       })
     })
@@ -60,21 +50,29 @@ class App extends Component {
  
     // const category = this.state.data[event.target.id]
     const category = this.state.data[id]
-  
+    
     this.setState({
       selectedCategory: id,
       selectedOption: category[Object.keys(category)[0]],
-      selectedHomeFeature: Object.keys(category)[0]
-
+      selectedHomeFeature: Object.keys(category)[0],
+      selectedAlternatives: Object.keys(category)
     })
   }
-
-  // incrementCounter = (nextObj) => {
-  //   const goToNextObject = this.state.data[id] 
-  //   this.setState({
-  //     nextIndex 
-  //   })
-  // }
+  
+  clickOtherOptions = () => {
+    
+    const category = this.state.data[this.state.selectedCategory]
+    console.log(category)
+    if (Object.keys(category).length > this.state.currentIndex) return 
+    
+    console.log(this.state.currentIndex)
+    this.setState({
+      selectedOption: category[Object.keys(category)[this.state.currentIndex]],
+      selectedHomeFeature: Object.keys(category)[this.state.currentIndex],
+      selectedAlternatives: Object.keys(category),
+      currentIndex: this.state.currentIndex + 1
+    })
+  }
 
   render () {
     return (
@@ -82,14 +80,7 @@ class App extends Component {
       <div className="App wrapper">
         <h1>A Sustainable Home</h1>
 
-
         <House handleClickProp={this.handleClick}/>
-      
-        {/* <button id="Roof" onClick={this.handleClick}>Roof</button>
-
-        <button id="Windows" onClick={this.handleClick}>Windows</button>
-
-        <button id="Door" onClick={this.handleClick}>Door</button> */}
 
         { 
         this.state.selectedHomeFeature !== "" ? 
