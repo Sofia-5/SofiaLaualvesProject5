@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/SofiaLaualvesProject5/static/css/main.42250e94.chunk.css",
-    "main.js": "/SofiaLaualvesProject5/static/js/main.faea16e1.chunk.js",
-    "main.js.map": "/SofiaLaualvesProject5/static/js/main.faea16e1.chunk.js.map",
+    "main.css": "/SofiaLaualvesProject5/static/css/main.15308820.chunk.css",
+    "main.js": "/SofiaLaualvesProject5/static/js/main.cbdf8a4a.chunk.js",
+    "main.js.map": "/SofiaLaualvesProject5/static/js/main.cbdf8a4a.chunk.js.map",
     "runtime-main.js": "/SofiaLaualvesProject5/static/js/runtime-main.82e103d9.js",
     "runtime-main.js.map": "/SofiaLaualvesProject5/static/js/runtime-main.82e103d9.js.map",
     "static/js/2.c61410e2.chunk.js": "/SofiaLaualvesProject5/static/js/2.c61410e2.chunk.js",
     "static/js/2.c61410e2.chunk.js.map": "/SofiaLaualvesProject5/static/js/2.c61410e2.chunk.js.map",
     "index.html": "/SofiaLaualvesProject5/index.html",
-    "precache-manifest.bc4c547fca44da45e10d25ab0c2c5732.js": "/SofiaLaualvesProject5/precache-manifest.bc4c547fca44da45e10d25ab0c2c5732.js",
+    "precache-manifest.a1997ae11d25acfaa55b3c8b4b5ddf3a.js": "/SofiaLaualvesProject5/precache-manifest.a1997ae11d25acfaa55b3c8b4b5ddf3a.js",
     "service-worker.js": "/SofiaLaualvesProject5/service-worker.js",
-    "static/css/main.42250e94.chunk.css.map": "/SofiaLaualvesProject5/static/css/main.42250e94.chunk.css.map",
+    "static/css/main.15308820.chunk.css.map": "/SofiaLaualvesProject5/static/css/main.15308820.chunk.css.map",
     "static/js/2.c61410e2.chunk.js.LICENSE.txt": "/SofiaLaualvesProject5/static/js/2.c61410e2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.82e103d9.js",
     "static/js/2.c61410e2.chunk.js",
-    "static/css/main.42250e94.chunk.css",
-    "static/js/main.faea16e1.chunk.js"
+    "static/css/main.15308820.chunk.css",
+    "static/js/main.cbdf8a4a.chunk.js"
   ]
 }
