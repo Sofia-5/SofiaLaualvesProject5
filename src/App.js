@@ -75,7 +75,7 @@ class App extends Component {
         <div className="wrapper">
           <h1>A Sustainable Home</h1>
 
-          <House handleClickProp={this.handleClick}/>
+          <House className="selectedFeature" handleClickProp={this.handleClick}/>
 
           { 
           this.state.selectedHomeFeature !== "" ? 
@@ -102,7 +102,7 @@ class App extends Component {
           <div>
             <p>Copyright &copy; 2020 SofiaCodes5</p>
             <p>Created @ <a href="https://junocollege.com/" target="_blank">Juno College</a></p> 
-            <p>SVG image created by Howe Hoe</p>
+            <p>SVG image created by Howe Foo</p>
           </div>
         </footer>
       </div>

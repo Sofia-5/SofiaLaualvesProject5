@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 
 class House extends Component {
   render() {
@@ -8,10 +9,10 @@ class House extends Component {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 2751.2 1256.4"
           >
-            <title>An Image of a House</title>
+            <title>A Clickable SVG Image of a House</title>
             <switch>
               <g>
-                <g id="evergreen_tree" data-name="evergreen_tree" onClick={() => this.props.handleClickProp("Evergreen Tree")}>
+                <g id="evergreen_tree" title="evergreen_tree" className="evergreenTree" data-name="evergreen_tree" onClick={() => this.props.handleClickProp("Evergreen Tree")} tabindex="0" cursor="pointer">
                   <g id="XMLID_239_">
                     <g id="XMLID_1849_">
                       <g id="XMLID_1920_">
@@ -99,7 +100,7 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="deciduous_tree" onClick={() => this.props.handleClickProp("Deciduous Trees")}>
+                <g id="deciduous_tree" title="deciduous_tree" className="deciduousTree" onClick={() => this.props.handleClickProp("Deciduous Trees")} tabindex="0">
                   <g id="XMLID_15_">
                     <g id="XMLID_1429_">
                       <path
@@ -184,9 +185,9 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="exterior_house_wall" onClick={() => this.props.handleClickProp("Exterior Wall")}>
+                <g id="exterior_house_wall" className="exteriorWall" onClick={() => this.props.handleClickProp("Exterior Wall")} tabindex="0">
                   <path
-                    id="exterior_walls"
+                    id="exterior_walls" className="exteriorWall"
                     fill="#aed9cf"
                     d="M472.3 504.4h1760v754.1h-1760z"
                     onClick={() => this.props.handleClickProp("Exterior Wall")}
@@ -204,28 +205,28 @@ class House extends Component {
                     onClick={() => this.props.handleClickProp("Exterior Wall")}
                   ></path>
                 </g>
-                <g id="cross_section_border"
+                <g id="cross_section_border" className="interiorWall"
                   stroke="#8b5e3c"
                   strokeMiterlimit="10"
                   strokeWidth="12.082">
                   <path
-                    id="interior_wall_upstairs"
+                    id="interior_wall_upstairs" className="interiorWall"
                     fill="#c7e5f8"
                     d="M1547.6 584.9h572.7v271.2h-572.7z"
-                    onClick={() => this.props.handleClickProp("Interior Wall")}
+                    onClick={() => this.props.handleClickProp("Interior Wall")} tabindex="0"
                   ></path>
                   <path
-                    id="interior_wall_downstairs"
+                    id="interior_wall_downstairs" className="interiorWall"
                     fill="#fec558"
                     d="M1547.6 926.8h572.7V1198h-572.7z"
-                    onClick={() => this.props.handleClickProp("Interior Wall")}
+                    onClick={() => this.props.handleClickProp("Interior Wall")} tabindex="0"
                   ></path>
                 </g>
                 <g id="front_door_and_unit">
                   <g id="XMLID_85_">
-                    <g id="XMLID_88_">
+                    <g id="XMLID_88_" className="exteriorWall" >
                       <path
-                        id="exterior_walls_around_door"
+                        id="exterior_walls_around_door" className="exteriorWall" 
                         fill="#eae8d1"
                         d="M1162.6 508.8l-298.5 216v537.7h588V724.9z"
                         onClick={() => this.props.handleClickProp("Exterior Wall")}
@@ -233,14 +234,14 @@ class House extends Component {
                     </g>
                   </g>
                   <path
-                    id="exterior_walls_around_door2"
+                    id="exterior_walls_around_door2"  className="exteriorWall"
                     fill="#c9c2a6"
                     d="M986.8 1257.6v-169.1c0-94.8 76.8-171.6 171.6-171.6s171.6 76.8 171.6 171.6v169.1"
-                    onClick={() => this.props.handleClickProp("Exterior Wall")}
+                    onClick={() => this.props.handleClickProp("Exterior Wall")} tabindex="0"
                   ></path>
-                  <g id="XMLID_49_">
+                  <g id="XMLID_49_" className="door">
                     <path
-                      id="Door"
+                      id="Door" className="door"
                       fill="#6c4441"
                       d="M1095.5 1014.5h125.9v224.1h-125.9z"
                       onClick={() => this.props.handleClickProp("Door")}
@@ -254,7 +255,7 @@ class House extends Component {
                     ></circle>
                   </g>
                 </g>
-                <g id="AC_unit_inside" onClick={() => this.props.handleClickProp("Interior AC Unit")}>
+                <g id="AC_unit_inside" className="interiorAC" onClick={() => this.props.handleClickProp("Interior AC Unit")} tabindex="0">
                   <g id="XMLID_640_">
                     <path
                       id="AC_inside"
@@ -322,7 +323,7 @@ class House extends Component {
                     d="M1582.9 1001.2h121.8"
                   ></path>
                 </g>
-                <g id="sofa" onClick={() => this.props.handleClickProp("Furniture")}>
+                <g id="sofa" className="furniture" onClick={() => this.props.handleClickProp("Furniture")} tabindex="0">
                   <g id="XMLID_604_">
                     <path
                       id="top_of_sofa"
@@ -356,7 +357,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="bookshelf" onClick={() => this.props.handleClickProp("Furniture")}>
+                <g id="bookshelf" className="furniture" onClick={() => this.props.handleClickProp("Furniture")} tabindex="0">
                   <g id="Bookcase_2_">
                     <g id="Cupboard">
                       <path
@@ -812,7 +813,7 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="coffee_table" onClick={() => this.props.handleClickProp("Furniture")}>
+                <g id="coffee_table" className="furniture" onClick={() => this.props.handleClickProp("Furniture")} tabindex="0">
                   <g
                     id="XMLID_616_"
                     fill="none"
@@ -833,7 +834,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="light_fixture" onClick={() => this.props.handleClickProp("Lighting")}>
+                <g id="light_fixture" className="lighting" onClick={() => this.props.handleClickProp("Lighting")} tabindex="0">
                   <g id="XMLID_240_">
                     <path
                       id="XMLID_647_"
@@ -876,7 +877,7 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="showerhead_and_bathtub" onClick={() => this.props.handleClickProp("Shower Head")}>
+                <g id="showerhead_and_bathtub" className="showerhead" onClick={() => this.props.handleClickProp("Shower Head")} tabindex="0">
                   <g id="XMLID_97_">
                     <path
                       id="left_tub_leg"
@@ -958,7 +959,7 @@ class House extends Component {
                     ></use>
                   </g>
                 </g>
-                <g id="faucet_and_sink" onClick={() => this.props.handleClickProp("Faucets")}>
+                <g id="faucet_and_sink" className="faucet" onClick={() => this.props.handleClickProp("Faucets")} tabindex="0">
                   <g id="XMLID_53_">
                     <path
                       id="XMLID_89_"
@@ -997,7 +998,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="toilet" onClick={() => this.props.handleClickProp("Toilet")}>
+                <g id="toilet" className="toilet" onClick={() => this.props.handleClickProp("Toilet")} tabindex="0">
                   <g id="XMLID_40_">
                     <path
                       id="XMLID_38_"
@@ -1021,15 +1022,15 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="roof" onClick={() => this.props.handleClickProp("Roof")}>
-                  <g id="XMLID_398_">
+                <g id="roof" className="roof" onClick={() => this.props.handleClickProp("Roof")} tabindex="0">
+                  <g className="roof" id="XMLID_398_">
                     <defs>
                       <path
-                        id="XMLID_82_"
+                        id="XMLID_82_" 
                         d="M2303 543.8l-1106.5.1-40.3-27.5-42.1 27.5-700.8.1 186.1-223.4H2116z"
                       ></path>
                     </defs>
-                    <use
+                    <use 
                       fill="#724a27"
                       overflow="visible"
                       xlinkHref="#XMLID_82_"
@@ -1038,56 +1039,56 @@ class House extends Component {
                       <use overflow="visible" xlinkHref="#XMLID_82_"></use>
                     </clipPath>
                     <path
-                      id="XMLID_408_"
+                      id="XMLID_408_" 
                       fill="#633b1d"
                       d="M2162.2 690.4h-767.9v-82.8h949.1z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_407_"
+                      id="XMLID_407_" 
                       fill="#633b1d"
                       d="M1362.5 567h980.9v18.3h-980.9z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_405_"
+                      id="XMLID_405_" 
                       fill="#633b1d"
                       d="M367.3 526.6h2062v18.3h-2062z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_404_"
+                      id="XMLID_404_" 
                       fill="#633b1d"
                       d="M366.1 486.1h2024.7v18.3H366.1z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_403_"
+                      id="XMLID_403_" 
                       fill="#633b1d"
                       d="M353.5 445.7h1976.7V464H353.5z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_402_"
+                      id="XMLID_402_" 
                       fill="#633b1d"
                       d="M328.1 405.3h1968.7v18.3H328.1z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_401_"
+                      id="XMLID_401_" 
                       fill="#633b1d"
                       d="M326.3 364.9H2281v18.3H326.3z"
                       clipPath="url(#XMLID_17_)"
                       opacity="0.5"
                     ></path>
                     <path
-                      id="XMLID_400_"
+                      id="XMLID_400_" 
                       fill="#633b1d"
                       d="M322.7 318h1911.5v24.8H322.7z"
                       clipPath="url(#XMLID_17_)"
@@ -1095,12 +1096,12 @@ class House extends Component {
                     ></path>
                   </g>
                   <path
-                    id="XMLID_234_"
+                    id="XMLID_234_" 
                     fill="#a97c50"
                     d="M1483.1 735L1166 482.4c-3-2.2-6.4-3.1-9.8-3-3.3-.1-6.8.8-9.8 3L829.2 735c-7.7 5.7-9.9 17.3-4.8 25.9 5 8.7 15.4 11.1 23.1 5.4L1156.2 520l308.7 246.4c7.7 5.7 18.1 3.2 23.1-5.4 5-8.7 2.9-20.3-4.9-26z"
                   ></path>
                 </g>
-                <g id="windows" onClick={() => this.props.handleClickProp("Windows")}>
+                <g id="windows" className="window" onClick={() => this.props.handleClickProp("Windows")} tabindex="0">
                   <g id="XMLID_118_">
                     <path
                       id="XMLID_210_"
@@ -1700,7 +1701,7 @@ class House extends Component {
                     <path id="XMLID_73_" fill="none" d="M1156.5 641.9V815"></path>
                   </g>
                 </g>
-                <g id="AC_unit_outside" onClick={() => this.props.handleClickProp("Outdoor AC Unit")}>
+                <g id="AC_unit_outside" className="outdoorAC" onClick={() => this.props.handleClickProp("Outdoor AC Unit")} tabindex="0">
                   <g id="XMLID_1339_">
                     <path
                       id="XMLID_1341_"
@@ -1957,7 +1958,7 @@ class House extends Component {
                     </g>
                   </g>
                 </g>
-                <g id="outdoor_grass" onClick={() => this.props.handleClickProp("Grass")}>
+                <g id="outdoor_grass" className="grass" onClick={() => this.props.handleClickProp("Grass")} tabindex="0">
                   <g id="XMLID_35_">
                     <path
                       id="outdoor_grass"
@@ -1994,7 +1995,7 @@ class House extends Component {
                     ></path>
                   </g>
                 </g>
-                <g id="compass" onClick={() => this.props.handleClickProp("Orientation")}>
+                <g id="compass" className="compass" onClick={() => this.props.handleClickProp("Orientation")} tabindex="0">
                   <g id="XMLID_52_">
                     <g id="XMLID_503_">
                       <path
