@@ -71,31 +71,40 @@ class App extends Component {
   render () {
     return (
 
-      <div className="App wrapper">
-        <h1>A Sustainable Home</h1>
+      <div className="App">
+        <div className="wrapper">
+          <h1>A Sustainable Home</h1>
 
-        <House handleClickProp={this.handleClick}/>
+          <House handleClickProp={this.handleClick}/>
 
-        { 
-        this.state.selectedHomeFeature !== "" ? 
-      
-        <div className="displayCategory"> 
-          <div className="flex">
-            <h2> Selected: {this.state.selectedCategory} </h2>
-            <button onClick={this.clickOtherOptions}>Other Options</button>
-          </div>
-          <div className="displayContainer">
-            <div className="content">
-              <h2>{this.state.selectedHomeFeature}</h2>
-              <p>{this.state.selectedOption.Description}</p>
+          { 
+          this.state.selectedHomeFeature !== "" ? 
+        
+          <div className="displayCategory"> 
+            <div className="flex">
+              <h2> Selected: {this.state.selectedCategory} </h2>
+              <button onClick={this.clickOtherOptions}>Other Options</button>
             </div>
-            <div className="imgContainer">
-              <img src={this.state.selectedOption.Image}/> 
+            <div className="displayContainer">
+              <div className="content">
+                <h2>{this.state.selectedHomeFeature}</h2>
+                <p>{this.state.selectedOption.Description}</p>
+              </div>
+              <div className="imgContainer">
+                <img src={this.state.selectedOption.Image}/> 
+              </div>
             </div>
+          </div> 
+          : <p className="instructions">Click on a part of the house or trees above to learn about sustainable features to help save you on your energy bill and help improve the health of our planet.</p>  
+          }
+        </div>
+        <footer> 
+          <div>
+            <p>Copyright &copy; 2020 SofiaCodes5</p>
+            <p>Created @ <a href="https://junocollege.com/" target="_blank">Juno College</a></p> 
+            <p>SVG image created by Howe Hoe</p>
           </div>
-        </div> 
-        : <p className="instructions">Click on a part of the house or trees above to learn about sustainable features to help save you on your energy bill and help improve the health of our planet.</p>  
-        }
+        </footer>
       </div>
     );
   }

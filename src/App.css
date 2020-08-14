@@ -15,6 +15,7 @@ html {font-size: 62.5%;}
 
 .App {
   text-align: center;
+  height: 100vh
 }
 
 .wrapper {
@@ -74,7 +75,14 @@ button {
   padding: 10px;
   border-radius: 5px;
   font-size: 1.5rem;
-  
+  background-color: #eae8d1;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 0 #fec558;
+  background-color: #88bb40;
+  color: #ffffff;
 }
 
 .displayCategory h2 {
@@ -122,9 +130,26 @@ button {
   font-size: 2rem;
 }
 
-#Roof:hover {
-  box-shadow: 0 5px 5px 0 yellow;
+footer {
+  text-align: center;
+  background-color: #aed9cf;
+  padding: 20px 0;
+  margin: 20px 0 0 0;
 }
+
+footer p {
+  font-size: 1.5rem;
+  color: #030303;
+}
+
+footer a {
+  color: #030303;
+}
+
+footer a:hover {
+  color: #fec558;
+}
+
 
 /*****************/
 /* Media Queries */ 

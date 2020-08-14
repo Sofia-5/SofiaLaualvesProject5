@@ -8,9 +8,10 @@ class House extends Component {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 2751.2 1256.4"
           >
+            <title>An Image of a House</title>
             <switch>
               <g>
-                <g id="evergreen_tree" onClick={() => this.props.handleClickProp("Evergreen Tree")}>
+                <g id="evergreen_tree" data-name="evergreen_tree" onClick={() => this.props.handleClickProp("Evergreen Tree")}>
                   <g id="XMLID_239_">
                     <g id="XMLID_1849_">
                       <g id="XMLID_1920_">
