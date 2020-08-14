@@ -37,8 +37,21 @@ class App extends Component {
       const data = snapshot.val();
       console.log(data)
           
+
+      const nextOptionArray = []; 
+
+      for (let selectedCategory in data) {
+        const nextOptionObject = {
+          category: selectedCategory,
+          selectedHomeFeature: selectedCategory.sAlternatives[0]
+        }
+        nextOptionArray.push(nextOptionObject)
+      }
+      console.log(nextOptionArray)
+
       this.setState({
-        data: snapshot.val()
+        data: snapshot.val(),
+        nextOption: nextOptionArray
         
       })
     })
@@ -59,20 +72,20 @@ class App extends Component {
     })
   }
   
-  clickOtherOptions = () => {
+  // clickOtherOptions = () => {
     
-    const category = this.state.data[this.state.selectedCategory]
-    console.log(category)
-    if (Object.keys(category).length > this.state.currentIndex) return 
+  //   const category = this.state.data[this.state.selectedCategory]
+  //   console.log(category)
+  //   if (Object.keys(category).length > this.state.currentIndex) return 
     
-    console.log(this.state.currentIndex)
-    this.setState({
-      selectedOption: category[Object.keys(category)[this.state.currentIndex]],
-      selectedHomeFeature: Object.keys(category)[this.state.currentIndex],
-      selectedAlternatives: Object.keys(category),
-      currentIndex: this.state.currentIndex + 1
-    })
-  }
+  //   console.log(this.state.currentIndex)
+  //   this.setState({
+  //     selectedOption: category[Object.keys(category)[this.state.currentIndex]],
+  //     selectedHomeFeature: Object.keys(category)[this.state.currentIndex],
+  //     selectedAlternatives: Object.keys(category),
+  //     currentIndex: this.state.currentIndex + 1
+  //   })
+  // }
 
   render () {
     return (
