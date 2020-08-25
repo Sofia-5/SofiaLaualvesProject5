@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/SofiaLaualvesProject5/static/css/main.3ca6a591.chunk.css",
-    "main.js": "/SofiaLaualvesProject5/static/js/main.e9319920.chunk.js",
-    "main.js.map": "/SofiaLaualvesProject5/static/js/main.e9319920.chunk.js.map",
-    "runtime-main.js": "/SofiaLaualvesProject5/static/js/runtime-main.82e103d9.js",
-    "runtime-main.js.map": "/SofiaLaualvesProject5/static/js/runtime-main.82e103d9.js.map",
-    "static/js/2.a188f190.chunk.js": "/SofiaLaualvesProject5/static/js/2.a188f190.chunk.js",
-    "static/js/2.a188f190.chunk.js.map": "/SofiaLaualvesProject5/static/js/2.a188f190.chunk.js.map",
-    "index.html": "/SofiaLaualvesProject5/index.html",
-    "precache-manifest.741ff4b74721aa4629eecb1228ab3006.js": "/SofiaLaualvesProject5/precache-manifest.741ff4b74721aa4629eecb1228ab3006.js",
-    "service-worker.js": "/SofiaLaualvesProject5/service-worker.js",
-    "static/css/main.3ca6a591.chunk.css.map": "/SofiaLaualvesProject5/static/css/main.3ca6a591.chunk.css.map",
-    "static/js/2.a188f190.chunk.js.LICENSE.txt": "/SofiaLaualvesProject5/static/js/2.a188f190.chunk.js.LICENSE.txt"
+    "main.css": "/a_sustainable_home/static/css/main.3ca6a591.chunk.css",
+    "main.js": "/a_sustainable_home/static/js/main.45d6bec8.chunk.js",
+    "main.js.map": "/a_sustainable_home/static/js/main.45d6bec8.chunk.js.map",
+    "runtime-main.js": "/a_sustainable_home/static/js/runtime-main.f3b62cfb.js",
+    "runtime-main.js.map": "/a_sustainable_home/static/js/runtime-main.f3b62cfb.js.map",
+    "static/js/2.739007ff.chunk.js": "/a_sustainable_home/static/js/2.739007ff.chunk.js",
+    "static/js/2.739007ff.chunk.js.map": "/a_sustainable_home/static/js/2.739007ff.chunk.js.map",
+    "index.html": "/a_sustainable_home/index.html",
+    "precache-manifest.59d9ec1b72e5d6478a60fcb2a163b131.js": "/a_sustainable_home/precache-manifest.59d9ec1b72e5d6478a60fcb2a163b131.js",
+    "service-worker.js": "/a_sustainable_home/service-worker.js",
+    "static/css/main.3ca6a591.chunk.css.map": "/a_sustainable_home/static/css/main.3ca6a591.chunk.css.map",
+    "static/js/2.739007ff.chunk.js.LICENSE.txt": "/a_sustainable_home/static/js/2.739007ff.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.82e103d9.js",
-    "static/js/2.a188f190.chunk.js",
+    "static/js/runtime-main.f3b62cfb.js",
+    "static/js/2.739007ff.chunk.js",
     "static/css/main.3ca6a591.chunk.css",
-    "static/js/main.e9319920.chunk.js"
+    "static/js/main.45d6bec8.chunk.js"
   ]
 }
