@@ -33,7 +33,6 @@ class App extends Component {
     const dbRef = firebase.database().ref();
     dbRef.on('value', (snapshot) => {
       const data = snapshot.val();
-      console.log(data)
           
       this.setState({
         data: snapshot.val()
@@ -43,8 +42,7 @@ class App extends Component {
   }
 
   handleClick = (id) => {
-    console.log(id);
- 
+  
     const category = this.state.data[id]
     
     this.setState({
@@ -72,39 +70,54 @@ class App extends Component {
     return (
 
       <div className="App">
-        <div className="wrapper">
-          <h1>A Sustainable Home</h1>
+      
+        <div className="contentWrap"> 
+          <header className="wrapper">
+            <h1>A Sustainable Home</h1>
 
-          <House className="selectedFeature" handleClickProp={this.handleClick}/>
+            {
+              this.state.selectedHomeFeature == "" ?
+              <p className="instructions">Click on a part of the house or trees above to learn about sustainable features to help save you on your energy bill and help improve the health of our planet.</p> 
+              : <p className="instructions">Scroll down to learn about the <b>{this.state.selectedCategory}</b>!</p> 
+            }
+          </header>
+            <House className="selectedFeature" handleClickProp={this.handleClick}/>
 
-          { 
-          this.state.selectedHomeFeature !== "" ? 
-        
-          <div className="displayCategory"> 
-            <div className="flex">
-              <h2> Selected: {this.state.selectedCategory} </h2>
-              <button onClick={this.clickOtherOptions}>Other Options</button>
-            </div>
-            <div className="displayContainer">
-              <div className="content">
-                <h2>{this.state.selectedHomeFeature}</h2>
-                <p>{this.state.selectedOption.Description}</p>
+          <main className="wrapper">
+            { 
+            this.state.selectedHomeFeature !== "" ? 
+          
+            <div className="displayCategory"> 
+              <div className="flex">
+                <h2> Selected: {this.state.selectedCategory} </h2>
+                <button onClick={this.clickOtherOptions}>Other Options</button>
               </div>
-              <div className="imgContainer">
-                <img src={this.state.selectedOption.Image}/> 
+              <div className="displayContainer">
+                <div className="content">
+                  <h2>{this.state.selectedHomeFeature}</h2>
+                  <p>{this.state.selectedOption.Description}</p>
+                </div>
+                <div className="imgContainer">
+                  <img src={this.state.selectedOption.Image}/> 
+                </div>
               </div>
-            </div>
-          </div> 
-          : <p className="instructions">Click on a part of the house or trees above to learn about sustainable features to help save you on your energy bill and help improve the health of our planet.</p>  
-          }
+            </div> 
+            : "" 
+            }
+            
+          </main>
         </div>
-        <footer> 
-          <div>
-            <p>Copyright &copy; 2020 SofiaCodes5</p>
-            <p>Created @ <a href="https://junocollege.com/" target="_blank">Juno College</a></p> 
-            <p>SVG image created by Howe Foo</p>
-          </div>
-        </footer>
+
+        <div className="footerParent">
+          <footer> 
+            <div>
+              <p>Copyright &copy; 2020 SofiaCodes5</p>
+              <p>Created @ <a href="https://junocollege.com/" target="_blank">Juno College</a></p> 
+              <p>SVG image created by Howe Foo</p>
+            </div>
+          </footer>
+        </div>
+      
       </div>
     );
   }

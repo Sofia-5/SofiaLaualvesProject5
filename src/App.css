@@ -31,7 +31,7 @@ code {
 
 .App {
   text-align: center;
-  height: 100vh
+  height: 100vh;
 }
 
 .wrapper {
@@ -77,7 +77,13 @@ code {
 
 h1 {
   font-size: 5rem;
-  margin-top: 50px;
+  margin: 50px 0 60px 0;
+}
+
+.instructions {
+  padding: 0 200px;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .flex {
@@ -163,6 +169,7 @@ button:hover {
   justify-content: space-between;
   margin: 20px;
   padding: 20px;
+  
 }
 
 .content {
@@ -190,16 +197,20 @@ button:hover {
   align-items: center;
 }
 
-.instructions {
-  margin: 30px auto;
-  font-size: 2rem;
+.contentWrap {
+  min-height: 100vh;
+  margin-bottom: 20px;
+}
+
+.footerParent {
+  width: 100%;
+  display: block;
 }
 
 footer {
   text-align: center;
   background-color: #aed9cf;
   padding: 20px 0;
-  margin: 20px 0 0 0;
 }
 
 footer p {
